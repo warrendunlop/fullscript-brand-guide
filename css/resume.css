@@ -3,7 +3,7 @@ body {
   padding-top: 54px;
   color: #404F5E;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: .9rem;
 }
 
 @media (min-width: 992px) {
@@ -25,19 +25,19 @@ h6 {
 }
 
 h1 {
-  font-size: 5rem;
-  line-height: 5.5rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   color: #88B04B;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #88B04B;
 }
 
 h3 {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: .9rem;
 }
 
 p {
@@ -56,7 +56,7 @@ p {
 .subheading {
   font-weight: 300;
   font-family: 'Montserrat', serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -136,6 +136,22 @@ section#title-section {
 @media (min-width: 576px) {  
   section#iconography {
     background: url('../img/plants.jpg') no-repeat top 50px right -300px;
+  }
+  body {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .subheading {
+    font-size: 1.5rem;
   }
 }
 
