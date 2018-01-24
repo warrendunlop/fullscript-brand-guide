@@ -528,7 +528,15 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary btn-lg" type="submit">Submit form</button>
+            <button class="btn btn-primary btn-lg position-relative" id="validation-btn" type="submit">
+              <span>Submit form</span>
+              <div class="loading-wrapper position-absolute">
+                <div class="loading1"></div>
+                <div class="loading2"></div>
+                <div class="loading3"></div>
+              </div>
+            </button>
+            
             <small class="silt ml-3">Hit "Submit" to view validation styling</small>
           </form>
 
@@ -546,7 +554,13 @@
                       event.preventDefault();
                       event.stopPropagation();
                     }
-                    form.classList.add('was-validated');
+                    
+                    $('#validation-btn').toggleClass('is-loading');
+                    setTimeout(
+                      function(){
+                        $('#validation-btn').toggleClass('is-loading');
+                        form.classList.add('was-validated');
+                      }, 1500);
                   }, false);
                 });
               }, false);

@@ -388,6 +388,15 @@ select.form-control:not([size]):not([multiple]) {
   }
 }
 
+.btn {
+  transition: color .15s ease-in-out,
+              background-color .15s ease-in-out,
+              border-color .15s ease-in-out,
+              box-shadow .15s ease-in-out,
+              width .15s ease-in-out,
+              height .15s ease-in-out;
+}
+
 /* primary button */
 .btn-primary, .btn-primary:disabled {
   background-color: #88B04B;
@@ -472,3 +481,66 @@ select.form-control:not([size]):not([multiple]) {
 /* section#downloads .disabled:after {
   content:url('../img/coming-soon.svg')
 } */
+
+/* loader animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#validation-btn span {
+  transition: opacity .2s;
+  opacity: 1;
+}
+#validation-btn.is-loading {
+  pointer-events: none;
+}
+#validation-btn.is-loading span {
+  transition: opacity .2s;
+  opacity: 0;
+}
+.loading-wrapper {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity .2s;
+  opacity: 0;
+}
+.is-loading .loading-wrapper {
+  opacity: 1;
+}
+.loading-wrapper.position-absolute {
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+.loading1, .loading2, .loading3 {
+  border-radius: 100%;
+  position: absolute;
+  border: .1rem solid white;
+  border-top-color: transparent;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s infinite linear;
+}
+
+.loading1 { /* inside, smallest */
+  animation: spin calc(1s/1.2) infinite linear;
+}
+
+.loading2 { /* middle */
+  width: calc(20px*1.3);
+  height: calc(20px*1.3);
+}
+
+.loading3 { /* outside, biggest */
+  width: calc(20px*1.6);
+  height: calc(20px*1.6);
+  animation: spin calc(1s*2) infinite linear;
+}
