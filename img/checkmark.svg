@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M279.199755,60.6366846 C278.720532,61.1211051 277.944705,61.1211051 277.466708,60.6366846 L274.358498,57.4960045 C273.880501,57.011584 273.880501,56.2273431 274.358498,55.7429226 C274.837721,55.2597411 275.613548,55.2597411 276.091545,55.7429226 L278.333231,58.0089203 L284.907535,51.3633154 C285.385533,50.8788949 286.16136,50.8788949 286.640583,51.3633154 C287.119806,51.8464969 287.119806,52.6307378 286.640583,53.1151583 L279.199755,60.6366846 Z" id="path-1"></path>
+    </defs>
+    <g id="07" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1018.000000, -517.000000)">
+        <g id="Group-7" transform="translate(400.000000, 317.000000)">
+            <g id="Group-5" transform="translate(0.000000, 59.000000)">
+                <g id="Group-3" transform="translate(344.000000, 90.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Tick" fill="#88B04B" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

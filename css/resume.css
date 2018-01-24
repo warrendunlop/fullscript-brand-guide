@@ -44,9 +44,14 @@ p {
   line-height: 1.8;
 }
 
-.muted {
-  color: #798990;
-}
+.greenery { color: #88B04B;}
+.orion { color: #404F5E;}
+.hydro { color: #486971;}
+.fs-blue { color: #3498DB;}
+.slate { color: #798990;}
+.coral { color: #EF5C6E;}
+.silt { color: #ABBDB1;}
+.grape { color: #784067;}
 
 .subheading {
   font-weight: 300;
@@ -125,7 +130,13 @@ section.resume-section .resume-item .resume-date {
 }
 
 section#title-section {
-  background: url('../img/intro-bg.png') no-repeat top right;
+  background: url('../img/plants3.png') no-repeat 85% 100%;
+}
+
+@media (min-width: 576px) {  
+  section#iconography {
+    background: url('../img/plants.jpg') no-repeat top 50px right -300px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -135,8 +146,19 @@ section#title-section {
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
-  section#iconography {
-    background: url('../img/plants.jpg') no-repeat top 50px right -300px;
+
+  section#title-section {
+    background: url('../img/intro-bg.png') no-repeat top right,
+                url('../img/plants3.png') no-repeat 85% 100%;
+  }
+  section#intro {
+    background: url('../img/plants4.png') no-repeat 100% 85%;
+  }
+  section#voiceandtone {
+    background: url('../img/plants2.png') no-repeat 50% 100%;
+  }
+  section#contact {
+    background: url('../img/plants5.png') no-repeat 115% 40%;
   }
 }
 
@@ -187,13 +209,250 @@ a:hover, a:focus, a:active {
 }
 
 .logo-dont:before {
-   content: 'x';
-   display: inline-block;
-   width: 20px;
-   height: 20px;
-   border-radius: 20px;
-   background-color: #EF5C6E;
-   color: white;
-   margin-right: 10px;
-   line-height: 1;
+  content: url('../img/x.svg');
+  display: inline-block;
+  margin-right: 15px;
 }
+
+.form-control {
+  padding: .6rem .8rem;
+  border: 1px solid #ABBDB1;
+}
+.form-control:focus {
+  color: #495057;
+  border-color: #486971;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(131, 161, 194, 0.15);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #ABBDB1;
+}
+.form-control::-moz-placeholder {
+  color: #ABBDB1;
+}
+.form-control:-ms-input-placeholder { 
+  color: #ABBDB1;
+}
+.form-control:-moz-placeholder { 
+  color: #ABBDB1;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.7rem + 2px);
+}
+
+.was-validated #passwordHelpBlock {
+  display: none;
+}
+.valid-feedback {
+  color: #88B04B;
+}
+.valid-feedback:before {
+  content: url('../img/checkmark.svg');
+  margin-right: 2px;
+}
+.custom-control-input.is-valid~.custom-control-label, .was-validated .custom-control-input:valid~.custom-control-label {
+  color: #88B04B;
+}
+.custom-control-input.is-valid:checked~.custom-control-label::before, .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
+  background-color: #88B04B;
+}
+.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+  border-color: #88B04B;
+}
+.custom-select.is-valid:focus, .form-control.is-valid:focus, .was-validated .custom-select:valid:focus, .was-validated .form-control:valid:focus {
+  border-color: #647B42;
+  box-shadow: 0 0 0 0.2rem rgba(136, 176, 75, 0.15);
+}
+
+.invalid-feedback {
+  color: #EF5C6E;
+}
+.invalid-feedback:before {
+  content: url('../img/x.svg');
+  margin-right: 2px;
+}
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+  border-color: #EF5C6E;
+}
+.custom-select.is-invalid:focus, .form-control.is-invalid:focus, .was-validated .custom-select:invalid:focus, .was-validated .form-control:invalid:focus {
+  border-color: ##984750;
+  box-shadow: 0 0 0 0.2rem rgba(239, 92, 110, 0.15);
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: #F4F7FB;
+  border-color: #DCE5EA;
+  color: #ABBDB1;
+  cursor: not-allowed;
+}
+
+.input-group-text {
+  background-color: #FAFAFC;
+  border: 1px solid #ABBDB1;
+  color: #ABBDB1;
+}
+
+
+
+
+/* custom looking select menus */
+.select-styled {
+  position: relative;
+}
+.select-styled select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+/* Undo the Firefox inner focus ring */
+.select-styled select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+/* Dropdown arrow */
+.select-styled:after {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  display: inline-block;
+  content: url("../img/select-arrow.svg");
+  width: 0;
+  height: 0;
+  margin-top: -.92rem;
+  pointer-events: none;
+}
+
+/* Hide the arrow in IE10 and up */
+.select-styled select::-ms-expand {
+  display: none;
+}
+
+/* Media query to target Firefox only */
+@-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
+  .select-styled select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem;
+  }
+
+  /* <option> elements inherit styles from <select>, so reset them. */
+  .select-styled option {
+    background-color: white;
+  }
+}
+
+/* IE9 hack to hide the arrow */
+@media screen and (min-width:0\0) {
+  .select-styled select {
+    z-index: 1;
+  }
+  .select-styled:after {
+    z-index: 5;
+  }
+  .select-styled:before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: #eee;
+  }
+  .select-styled select:hover,
+  .select-styled select:focus,
+  .select-styled select:active {
+    color: #404F5E;
+    background-color: #eee;
+  }
+}
+
+/* primary button */
+.btn-primary, .btn-primary:disabled {
+  background-color: #88B04B;
+  border-color: #88B04B;
+}
+.btn-primary:hover {
+  background-color: #69922B;
+  border-color: #69922B;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color: #5E8523;
+  border-color: #5E8523;
+}
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(136, 176, 75, 0.25);
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.3rem rgba(136, 176, 75, 0.5);
+}
+
+/* secondary button */
+.btn-outline-primary, .btn-outline-primary:disabled {
+    color: #88B04B;
+    border-color: #88B04B;
+}
+.btn-outline-primary:hover {
+    background-color: #88B04B;
+    border-color: #88B04B;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    background-color: #779F3A;
+    border-color: #779F3A;
+}
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(136, 176, 75, 0.15);
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.3rem rgba(136, 176, 75, 0.5);
+}
+
+/* standard button */
+.btn-outline-secondary, .btn-outline-secondary:disabled {
+  border-color: #404F5E;
+  color: #404F5E;
+}
+.btn-outline-secondary:hover {
+  background-color: #404F5E;
+  border-color: #404F5E;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show>.btn-outline-secondary.dropdown-toggle {
+  background-color: #344251;
+  border-color: #344251;
+}
+.btn-outline-secondary.focus, .btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(64,79,94,.15);
+}
+.btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.3rem rgba(64,79,94,.3);
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.custom-control-label::before {
+  background-color: rgb(210, 223, 214);
+  top: .38rem;
+}
+.custom-control-label::after {
+  top: .38rem;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: #88B04B;
+}
+.custom-control-input:focus~.custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(136, 176, 75, 0.15);
+}
+.custom-control-input:active~.custom-control-label::before {
+  background-color: rgb(198, 219, 166);
+}
+
+/* section#downloads .disabled:after {
+  content:url('../img/coming-soon.svg')
+} */
